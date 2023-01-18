@@ -47,7 +47,7 @@ The current public API version, documentation included in this document.
 
 A new standard of API as outlined in our new API guidelines document. We will introduce v3 endpoints for our public endpoints in Q3 this year, but we do not have a deprecation date for the old endpoints at this time.
 
-We will always give at least **6 months**** notice** for any API deprecations or breaking changes to existing APIs unless there is a security reason for us to make the change sooner. Notice will be sent via email to the technical contact(s) that we store for each brand or partner.
+We will always give at least **6 months notice** for any API deprecations or breaking changes to existing APIs unless there is a security reason for us to make the change sooner. Notice will be sent via email to the technical contact(s) that we store for each brand or partner.
 
 A breaking change would either be a change in behaviour for an existing endpoint, a removal of data from an existing endpoint, a change in response code from an existing endpoint, or a total removal of an endpoint.
 
