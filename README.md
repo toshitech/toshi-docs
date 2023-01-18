@@ -79,6 +79,7 @@ The V3 API schema is available at [https://app.swaggerhub.com/apis-docs/toshitec
 * [Shopify](integration_shopify.md)
 * [Magento](https://github.com/toshitech/toshi-magento-plugin)
 * [Salesforce (Site Genesis)](https://github.com/toshitech/toshi-salesforce-cartridge)
+* [Salesforce (SFRA)](https://github.com/toshitech/toshi-salesforce-cartridge-sfra)
 
 Please see [Journey states](journey_states.md) for a mapping of the tracking information that TOSHI can share back via webhooks or CSV/SFTP file upload.
 
