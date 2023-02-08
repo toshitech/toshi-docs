@@ -75,6 +75,7 @@ The V3 API schema is available at [https://app.swaggerhub.com/apis-docs/toshitec
 ### Integration documentation
 
 * [General guide](integration_general.md)
+* [Ecommerce data flows](ecommerce_data_flows.md)
 * [FAQ](integration_faq.md)
 * [Shopify](integration_shopify.md)
 * [Magento](https://github.com/toshitech/toshi-magento-plugin)
