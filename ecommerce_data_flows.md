@@ -7,3 +7,5 @@ The existing TOSHI connectors and plugins take care of the first four API calls 
 TOSHI is also able to replace any order or label data API call with a CSV data transfer via a brand or integrator's SFTP site.
 
 ![](images/ecommerce-data-flows.jpg)
+
+[Miro board](https://miro.com/app/board/uXjVPp_I0-0=/)
