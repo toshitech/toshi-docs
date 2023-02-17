@@ -19,22 +19,29 @@
 
 **Response time (last 7 days)**
 
-Mean - 73ms
-95th percentile - 108ms
+Mean - 63.5ms
+95th percentile - 84.8ms
 
 [**https://api.toshi.co/v2/availability/check\_available**](https://api.toshi.co/v2/availability/check_available)
 
 **Response time (last 7 days)**
 
-Mean - 244ms
-95th percentile - 304ms
+Mean - 291ms
+95th percentile - 375ms
+
+[**https://api.toshi.co/v2/orders**](https://api.toshi.co/v2/orders)
+
+**Response time (last 7 days)**
+
+Mean - 187ms
+95th percentile - 161ms
 
 [**https://api.toshi.co/v2/order/confirm\_store\_order**](https://api.toshi.co/v2/order/confirm_store_order)
 
 **Response time (last 7 days)**
 
-Mean - 248ms
-95th percentile - 203ms
+Mean - 318ms
+95th percentile - 245ms
 
 ### Rate limits
 
