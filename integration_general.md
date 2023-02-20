@@ -212,25 +212,50 @@ modal.setProducts([
 
 The following data setting operations are available on the modal instance:
 
-```typescript
-export interface IntegrationDataOperations {
-  // Basket data methods
-  setEmail(email: string): IntegrationDataOperations;
-  setAddress(address: Address): IntegrationDataOperations;
-  setFirstName(firstName: string): IntegrationDataOperations;
-  setLastName(lastName: string): IntegrationDataOperations;
-  setProducts(products: Item[]): IntegrationDataOperations;
-  setPhone(phone: string): IntegrationDataOperations;
-  setBrandCheckoutReference(
-    brandCheckoutReference: string
-  ): IntegrationDataOperations;
-  setOrderTotal(orderTotal: Price): IntegrationDataOperations;
+📝 https://github.com/toshitech/toshi-modal/blob/master/ToshiModal.md
 
-  // Events
-  onReady(callback: () => void): IntegrationDataOperations;
-  onOrderCreated(callback: (orderId: number) => void): IntegrationDataOperations;
-  onOrderConfirmed(callback: (orderId: number) => void): IntegrationDataOperations;
-}
+#### Properties
+
+| Property            | Attribute            | Modifiers | Type                                                                         | Default    | Description                                      |
+| ------------------- | -------------------- | --------- | ---------------------------------------------------------------------------- | ---------- | ------------------------------------------------ |
+| `apiKey`            | `api-key`            |           | `String`                                                                     |            | TOSHI provided api key                           |
+| `apiUrl`            | `api-url`            |           | `String`                                                                     |            | TOSHI provided api url                           |
+| `bookerFallback`    | `booker-fallback`    |           | `Boolean`                                                                    | "false"    | allow user to use the TOSHI booker as a fallback |
+| `integrationActive` | `integration-active` |           | `Boolean`                                                                    | "false"    | enable/disable integration entirely              |
+| `isUsingBooker`     |                      | readonly  | `boolean`                                                                    |            |                                                  |
+| `modalVisible`      | `modal-visible`      |           | `Boolean`                                                                    | "false"    | open/close the modal                             |
+| `mode`              | `mode`               |           | `'checkout'\|'tbyb_wizard'\|'tbyb_checkout'\|'tbyb_button'\|'tbyb-checkout'` | "checkout" | integration mode                                 |
+| `onHydrateAgs`      |                      | readonly  | `{ orderId: string \| undefined; orderData: string \| undefined; }`          |
+
+#### Methods
+
+| Method                         | Type                                                                                                  | Description                                                                                                                       |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `clearCache`                   | `(clearCurrentState: boolean): Promise<this>`                                                         |                                                                                                                                   |
+| `clearSelectedDateTime`        | `(): this`                                                                                            |                                                                                                                                   |
+| `handleBooleanAttributeChange` | `(name: string, value: boolean): void`                                                                |                                                                                                                                   |
+| `hideModal`                    | `(): this`                                                                                            |                                                                                                                                   |
+| `mount`                        | `(container: HTMLElement): void`                                                                      |                                                                                                                                   |
+| `mountModalSeparately`         | `(container: HTMLElement, modalContainer: HTMLElement): void`                                         |                                                                                                                                   |
+| `onHydrate`                    | `(callback: (args: { orderId: string \| undefined; orderData: string \| undefined; }): void) => this` |                                                                                                                                   |
+| `onOrderConfirmed`             | `(callback: (orderId: string): void) => this`                                                         |                                                                                                                                   |
+| `onOrderCreated`               | `(callback: (orderId: string): void) => this`                                                         |                                                                                                                                   |
+| `onReady`                      | `(callback: (): void) => any`                                                                         |                                                                                                                                   |
+| `onShadowOrderCreated`         | `(callback: (orderId: string): void) => this`                                                         |                                                                                                                                   |
+| `setAddress`                   | `(address: Address): this`                                                                            | Sets the delivery address for the order.                                                                                          |
+| `setBrandCheckoutReference`    | `(reference: string): this`                                                                           | Supply the store order reference (for example quote or basket ID).<br />This is later used when confirming the order via webhook. |
+| `setEmail`                     | `(email: string): this`                                                                               | Sets the customer email address for the order.                                                                                    |
+| `setFeaturedImage`             | `(url: string): this`                                                                                 |                                                                                                                                   |
+| `setFirstName`                 | `(firstName: string): this`                                                                           | Sets the customer first name.                                                                                                     |
+| `setInlineErrorMessage`        | `(message: string \| undefined): this`                                                                |                                                                                                                                   |
+| `setLastName`                  | `(lastName: string): this`                                                                            | Sets the customer last name.                                                                                                      |
+| `setOrderData`                 | `(data: string): this`                                                                                | Sets generic order data.                                                                                                          |
+| `setOrderTotal`                | `(price: Price): this`                                                                                | Sets the order total prices.                                                                                                      |
+| `setPhone`                     | `(phone: string, countryCode: CountryCodes): this`                                                    | Sets the customer contact number.                                                                                                 |
+| `setProducts`                  | `(products: Item[]): this`                                                                            | Provides a list of products and their prices for the customer basket.                                                             |
+| `setStore`                     | `(id: number): this`                                                                                  | Sets the store ID for the order.                                                                                                  |
+| `showModal`                    | `(): this`                                                                                            |                                                                                                                                   |
+| `unmount`                      | `(): void`                                                                                            |                                                                                                                                   |
 ```
 
 ### Store arbitrary JSON data with an Order
